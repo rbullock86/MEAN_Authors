@@ -1,5 +1,6 @@
 const api = require("./controllers.js");
 const bp = require("body-parser");
+const path = require("path");
 
 module.exports = function(app){
     app.use(bp.json());
@@ -14,8 +15,11 @@ module.exports = function(app){
     // create author
     app.post("/api/authors", api.createAuthor);
     // delete author
-    app.delete("/api/author/:id", api.deleteAuthor);
+    app.delete("/api/authors/:id", api.deleteAuthor);
     // add quote
     // app.put("/api/authors/:id/quotes", api.createQuote);
     // delete quote??
+    app.all("*", (req,res,next) => {
+        res.sendFile(path.resolve("./client/dist/client/index.html"))
+    });
 }

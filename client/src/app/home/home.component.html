@@ -1,0 +1,14 @@
+<button (click)="newAuthorClick()">New Author</button>
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Actions available</th>
+  </tr>
+  <tr *ngFor="let author of _authorList">
+    <td>{{ author.name }}</td>
+    <td>
+      <button (click)="editAuthorClick( author._id )">Edit</button>
+      <button (click)="deleteAuthorClick( author._id)">Delete</button>
+    </td>
+  </tr>
+</table>

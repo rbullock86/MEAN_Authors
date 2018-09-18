@@ -1,0 +1,11 @@
+<button (click)="homeButtonClick()">Home</button>
+<h3>Edit This Author</h3>
+<p>Name:</p>
+<form (submit)="editAuthor()">
+  <input type="text" [(ngModel)]="_author.name" name="_author.name">
+  <span>{{ _status }}</span>
+  <div>
+    <button (click)="homeButtonClick()">Cancel</button>
+    <button type="submit">Submit</button>
+  </div>
+</form>

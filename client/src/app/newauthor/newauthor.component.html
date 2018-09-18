@@ -1,0 +1,8 @@
+<button (click)="homeButtonClick()">Home</button>
+<h3>New Author</h3>
+<p>{{_status}}</p>
+<form (submit)="createAuthor(newAuthor)">
+  <button (click)="homeButtonClick()">Cancel</button>
+  <input type="text" [(ngModel)]="newAuthor.name" name="newAuthor.name">
+  <button type="submit">Submit</button>
+</form>

@@ -14,7 +14,7 @@ const AuthorSchema = new mongoose.Schema({
 
 mongoose.connect("mongodb://localhost:27017/authors_db", {useNewUrlParser: true}, (errs)=>console.log(errs?errs:"db connected"));
 
-const Author = mongoose.model('author', AuthorSchema);
+const Author = mongoose.model("author", AuthorSchema);
 
 module.exports = {Author};
     
